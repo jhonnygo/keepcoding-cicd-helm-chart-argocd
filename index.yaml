@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  kc-chart-argocd:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2024-04-19T08:10:50.7244551+02:00"
+    description: Práctica de K8S y HELM con CI/CD en modulo de Keepcoding Academy
+    digest: 6d9010ca7a74418474b3d6e9bb2b405325bf37596d4f0ba1a6c7909f2b5c685e
+    name: kc-chart-argocd
+    type: application
+    urls:
+    - kc-chart-argocd/kc-chart-argocd-1.0.0.tgz
+    version: 1.0.0
+generated: "2024-04-19T08:10:50.7225153+02:00"

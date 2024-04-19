@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kc-cicd-app-argocd
+  namespace: keepcoding
+  labels:
+    app: kc-cicd-app-argocd
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kc-cicd-app-argocd
+  template:
+    metadata:
+      labels:
+        app: kc-cicd-app-argocd
+    spec:
+      containers:
+      - name: kc-cicd-app-argocd-container
+        image: jhoncytech/keepcoding-cicd:latest
+        ports:
+        - containerPort: 80

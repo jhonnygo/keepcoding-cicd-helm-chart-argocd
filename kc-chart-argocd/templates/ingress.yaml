@@ -1,0 +1,27 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: kc-cicd-ingress-argocd
+  namespace: keepcoding
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/validate-webhook: "false"
+spec:
+  ingressClassName: nginx
+  defaultBackend:
+    service:
+      name: kc-cicd-service-argocd
+      port:
+        number: 80
+  rules:
+  - host: yotkt.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: kc-cicd-service-argocd
+            port:
+              number: 80
