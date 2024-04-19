@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: kc-cicd-app-argocd-container
-        image: jhoncytech/keepcoding-cicd:latest
+        image: jhoncytech/keepcoding-cicd:1.0.0
         ports:
         - containerPort: 80
