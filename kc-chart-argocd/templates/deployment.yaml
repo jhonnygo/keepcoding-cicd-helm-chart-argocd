@@ -6,7 +6,7 @@ metadata:
   labels:
     app: kc-cicd-app-argocd
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: kc-cicd-app-argocd
